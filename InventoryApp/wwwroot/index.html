@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upravljanje Artiklima - Inventory App</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your stylesheet -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Upravljanje Artiklima</h1>
+
+    <!-- ER Diagram and GitHub links -->
+    <div class="navigation">
+        <button onclick="window.open('ERA_dijagram.png', '_blank')">ER Dijagram</button>
+        <button onclick="window.open('https://github.com/IGOR031/InventoryApp', '_blank')">GitHub Repozitorij</button>
+    </div>
+
+    <!-- Item Form -->
+    <form id="itemForm">
+        <input type="hidden" id="itemId">
+        <label for="name">Naziv:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="sku">SKU:</label>
+        <input type="text" id="sku" required><br>
+
+        <label for="quantity">Količina:</label>
+        <input type="number" id="quantity" step="0.01" required><br>
+
+        <label for="price">Cijena:</label>
+        <input type="number" id="price" step="0.01" required><br>
+
+        <label for="serial">Serijski Broj (opcionalno):</label>
+        <input type="text" id="serial"><br>
+
+        <label for="expiresAt">Datum Isteka (opcionalno):</label>
+        <input type="date" id="expiresAt"><br>
+
+        <button type="submit">Spremi Artikl</button>
+    </form>
+
+    <!-- Item List -->
+    <h2>Lista Artikala</h2>
+    <ul id="itemList"></ul>
+</body>
+</html>
